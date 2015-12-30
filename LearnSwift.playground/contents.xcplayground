@@ -1,0 +1,35 @@
+?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='osx' display-mode='rendered'>
+    <pages>
+        <page name='1a. The Basics'/>
+        <page name='1b. Type alliases'/>
+        <page name='1c. Tuples'/>
+        <page name='1d. Optionals'/>
+        <page name='1e. Assertions'/>
+        <page name='2. Basic operations'/>
+        <page name='3. Strings and Characters'/>
+        <page name='4a. Arrays'/>
+        <page name='4b. Dictionaries'/>
+        <page name='5. Control Flow'/>
+        <page name='6. Functions'/>
+        <page name='7. Closures'/>
+        <page name='8. Enumerations'/>
+        <page name='9. Classes and Structures'/>
+        <page name='10. Properties'/>
+        <page name='11. Methods'/>
+        <page name='12. Subscripts'/>
+        <page name='13. Inheritance'/>
+        <page name='14a. Initialization'/>
+        <page name='14b. Initializer Chaining'/>
+        <page name='15. Deinitialization'/>
+        <page name='16. ARC'/>
+        <page name='17. Optional Chaining'/>
+        <page name='18. Type Casting'/>
+        <page name='19. Nested Types'/>
+        <page name='20. Extensions'/>
+        <page name='21. Protocols'/>
+        <page name='22. Generics'/>
+        <page name='23. Advanced Operators'/>
+        <page name='99. Not The End'/>
+    </pages>
+</playground>

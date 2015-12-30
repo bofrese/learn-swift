@@ -17,7 +17,7 @@ Learn Apple's Swift programming language interactively through these playgrounds
   More than a primer, these playgrounds are intended to get programmers up to
   speed on Swift as fast as possible so they can begin using Swift productively.
 
-  These playgrounds only cover the language. They do not dig into the Swift 
+  These playgrounds only cover the language. They do not dig into the Swift
   Standard Library or other APIs.
 
   To increase your understanding, you are encouraged to experiment with them
@@ -39,3 +39,5 @@ Learn Apple's Swift programming language interactively through these playgrounds
 
   Thanks to Rafał Wójcik for his quick work to update these playgrounds to
   incorporate the Swift language changes that came with XCode Beta 3.
+
+  Upgraded to XCode 7 and Swift 2.1 by Bo Frese
