@@ -1,4 +1,4 @@
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
 //:
 //: # Optional Chaining 
 //:
@@ -96,4 +96,4 @@ person
 
 
 
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)

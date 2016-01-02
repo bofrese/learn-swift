@@ -1,4 +1,4 @@
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
 //:
 //: # Deinitialization
 //:
@@ -76,4 +76,4 @@ Bank.coinsInBank
 
 
 
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)

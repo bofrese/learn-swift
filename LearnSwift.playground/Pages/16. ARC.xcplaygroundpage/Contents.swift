@@ -1,4 +1,4 @@
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
 //:
 //: # ARC
 //:
@@ -375,4 +375,4 @@ class FixedHTMLElement
 //: application to see it in action.
 
 
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)

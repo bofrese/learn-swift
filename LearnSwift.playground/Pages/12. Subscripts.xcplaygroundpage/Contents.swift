@@ -1,4 +1,4 @@
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
 //:
 //: # Subscripts
 //:
@@ -87,4 +87,4 @@ matrix[3,3] = 1
 
 
 
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)

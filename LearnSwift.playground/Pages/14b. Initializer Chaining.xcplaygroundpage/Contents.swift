@@ -1,4 +1,4 @@
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
 //:
 //: # Initializer Chaining
 //:
@@ -199,4 +199,4 @@ board.squareIsBlackAtRow(1, column: 2) // Should be true
 
 
 
-//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
