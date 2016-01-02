@@ -1,18 +1,18 @@
-// ------------------------------------------------------------------------------------------------
-// Things to know:
-//
-// * Methods can be in the form of Instance Methods, which apply to a given instance of a class
-//   struct or enumeration and Type Methods, which apply to the type itself, like static methods
-//   in C-like languages.
-// ------------------------------------------------------------------------------------------------
+//: ------------------------------------------------------------------------------------------------
+//: Things to know:
+//:
+//: * Methods can be in the form of Instance Methods, which apply to a given instance of a class
+//:   struct or enumeration and Type Methods, which apply to the type itself, like static methods
+//:   in C-like languages.
+//: ------------------------------------------------------------------------------------------------
 
-// Instance Methods
-//
-// Instance methods work on instances of a class, structure or enumeration. In order to call an
-// instance method, you must first instantiate the class, structure or enumeration and then place
-// the call on that instance.
-//
-// Here, we'll create a class with a single instance method:
+//: Instance Methods
+//:
+//: Instance methods work on instances of a class, structure or enumeration. In order to call an
+//: instance method, you must first instantiate the class, structure or enumeration and then place
+//: the call on that instance.
+//:
+//: Here, we'll create a class with a single instance method:
 class SomeClass
 {
 	func doSomething()
@@ -21,23 +21,23 @@ class SomeClass
 	}
 }
 
-// Since this should be pretty clear, let's jump into parameters for methods with internal and
-// external names.
-//
-// The defaults for external names are different for methods than they are for global functions.
-//
-// For methods, the default behavior is that the caller must always specify all but the first
-// external parameter name when calling the method. Member authors need not specify the external
-// names for those parameters as the default is to treat all parameters as if they had the "#"
-// specifier, which creates an external parameter name that mirrors the local parameter name.
-//
-// To override this default-external-names-for-second-and-beyond-parameters, specify an "_" as the
-// external parameter name for all but the first parameter.
-//
-// If you want the caller to also use external name for the first parameter, be sure to add your
-// own '#' symbol to the local name or specify the external name explicitly.
-//
-// Here's a class that exercises the various combinations of internal and external name usages:
+//: Since this should be pretty clear, let's jump into parameters for methods with internal and
+//: external names.
+//:
+//: The defaults for external names are different for methods than they are for global functions.
+//:
+//: For methods, the default behavior is that the caller must always specify all but the first
+//: external parameter name when calling the method. Member authors need not specify the external
+//: names for those parameters as the default is to treat all parameters as if they had the "#"
+//: specifier, which creates an external parameter name that mirrors the local parameter name.
+//:
+//: To override this default-external-names-for-second-and-beyond-parameters, specify an "_" as the
+//: external parameter name for all but the first parameter.
+//:
+//: If you want the caller to also use external name for the first parameter, be sure to add your
+//: own '#' symbol to the local name or specify the external name explicitly.
+//:
+//: Here's a class that exercises the various combinations of internal and external name usages:
 class Counter
 {
 	var count = 0;
@@ -94,7 +94,7 @@ class Counter
 	}
 }
 
-// Now let's see how we call each of those functions
+//: Now let's see how we call each of those functions
 var counter = Counter()
 counter.increment()
 counter.incrementBy(4)
@@ -105,8 +105,8 @@ counter.addTwiceWithExternalSpecified2(first: 10, second: 10)
 counter.addTwiceWithExternalSpecified3(10, 10)
 counter.count
 
-// The 'self' property refers to the current instance of a class, structure or enumeration. For
-// C++ developers, think of 'self' as 'this'.
+//: The 'self' property refers to the current instance of a class, structure or enumeration. For
+//: C++ developers, think of 'self' as 'this'.
 class Point
 {
 	var x: Int = 10
@@ -118,11 +118,11 @@ class Point
 	}
 }
 
-// ------------------------------------------------------------------------------------------------
-// Mutation
-//
-// Instance methods cannot by default modify properties of structures or enumerations. To enable
-// this, mark them as 'mutating':
+//: ------------------------------------------------------------------------------------------------
+//: Mutation
+//:
+//: Instance methods cannot by default modify properties of structures or enumerations. To enable
+//: this, mark them as 'mutating':
 struct Point2
 {
 	var x: Int = 10
@@ -134,17 +134,17 @@ struct Point2
 	}
 }
 
-// We'll create a constant Point2...
+//: We'll create a constant Point2...
 let fixedPoint = Point2(x: 3)
 
-// Because 'fixedPoint' is constant, we are not allowed to call mutating memthods:
-//
-// The following line won't compile:
-//
-// fixedPoint.setX(4)
+//: Because 'fixedPoint' is constant, we are not allowed to call mutating memthods:
+//:
+//: The following line won't compile:
+//:
+//: fixedPoint.setX(4)
 
-// If you're working with a structure or enumeration (not a class), uou can assign to 'self'
-// directly
+//: If you're working with a structure or enumeration (not a class), uou can assign to 'self'
+//: directly
 struct Point3
 {
 	var x = 0
@@ -156,8 +156,8 @@ struct Point3
 	}
 }
 
-// Assigning to 'self' in an enumeration is used to change to a different member of the same
-// enumeration:
+//: Assigning to 'self' in an enumeration is used to change to a different member of the same
+//: enumeration:
 enum TriStateSwitch
 {
 	case Off, Low, High
@@ -175,12 +175,12 @@ enum TriStateSwitch
 	}
 }
 
-// ------------------------------------------------------------------------------------------------
-// Type Methods
-//
-// Type methods are like C++'s static methods.
-//
-// They can only access Type members.
+//: ------------------------------------------------------------------------------------------------
+//: Type Methods
+//:
+//: Type methods are like C++'s static methods.
+//:
+//: They can only access Type members.
 struct LevelTracker
 {
 	var currentLevel = 1
@@ -211,17 +211,17 @@ struct LevelTracker
 	}
 }
 
-// To call a type method, use the type name, not the instance name:
+//: To call a type method, use the type name, not the instance name:
 LevelTracker.levelIsUnlocked(3)
 
-// If we attempt to use an instance to call a type method, we'll get an error
+//: If we attempt to use an instance to call a type method, we'll get an error
 var levelTracker = LevelTracker()
 
-// The following line will not compile:
-//
-// levelTracker.levelIsUnlocked(3)
+//: The following line will not compile:
+//:
+//: levelTracker.levelIsUnlocked(3)
 
-// For classes, type methods use the 'class' keyword rather than the 'static' keyword:
+//: For classes, type methods use the 'class' keyword rather than the 'static' keyword:
 class SomeOtherClass
 {
 	class func isGreaterThan100(value: Int) -> Bool
@@ -230,5 +230,5 @@ class SomeOtherClass
 	}
 }
 
-// We call class type methods with the type name just as we do for structures and enumerations:
+//: We call class type methods with the type name just as we do for structures and enumerations:
 SomeOtherClass.isGreaterThan100(105)
