@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Strings and Characters
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Strings are bridged perfectly with NSString class
 //:
@@ -69,8 +73,8 @@ countElements(originalString)
 //: Strings can be concatenated with strings and characters
 var helloworld = "hello, " + "world"
 
-//: ------------------------------------------------------------------------------------------------
-//: String interpolation
+
+//: ## String interpolation
 //:
 //: String interpolation refers to referencing values inside of a String. This works different from
 //: printf-style functions, in that String interpolation allows you to insert the values directly
@@ -78,8 +82,8 @@ var helloworld = "hello, " + "world"
 let multiplier = 3
 let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 
-//: ------------------------------------------------------------------------------------------------
-//: String comparison
+
+//: ## String comparison
 //:
 //: String comparison is case-sensitive and can be compared for equality
 var str1 = "We're a lot alike, you and I."
@@ -91,3 +95,6 @@ str1.hasPrefix("We're")
 str2.hasSuffix("I.")
 str1.hasPrefix("I.")
 
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

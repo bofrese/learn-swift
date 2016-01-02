@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Closures
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Closures are blocks of code.
 //:
@@ -16,15 +20,15 @@
 //:
 //: The basic syntax is:
 //:
-//: { (parameters) -> return_type in
-//:   ... statements ...
-//: }
+//:     { (parameters) -> return_type in
+//:       ... statements ...
+//:     }
 //:
 //: Here's an example of a simple String comparison closure that might be used for sorting Strings:
 //:
-//: { (s1: String, s2: String) -> Bool in
-//:   return s1 < s2
-//: }
+//:     { (s1: String, s2: String) -> Bool in
+//:        return s1 < s2
+//:     }
 //:
 //: Here's an example using Swift's 'sorted' member function. It's important to note that this
 //: function receives a single closure.
@@ -39,8 +43,8 @@ reversed = names.sorted({
         return s1 > s2
 })
 
-//: ------------------------------------------------------------------------------------------------
-//: Inferring Type from Context
+
+//: ## Inferring Type from Context
 //:
 //: Like functions, closures have a type.
 //:
@@ -80,7 +84,7 @@ reversed = names.sorted({ s1, s2 in s1 > s2 })
 //:
 //: Here's what that would might like (this will not compile - yet):
 //:
-//:    reversed = names.sorted({ s1, s2 in $0 > $1 })
+//:     reversed = names.sorted({ s1, s2 in $0 > $1 })
 //:
 //: This won't compile because you're not allowed to use shorthand names if you specify the
 //: parameter list. Therefore, we need to remove those in order to get it to compile. This makes
@@ -105,8 +109,8 @@ mutableCopyOfNames.sort(>)
 
 mutableCopyOfNames
 
-//: ------------------------------------------------------------------------------------------------
-//: Trailing Closures
+
+//: ## Trailing Closures
 //:
 //: Trailing Closures refer to closures that are the last parameter to a function. This special-case
 //: syntax allows a few other syntactic simplifications. In essence, you can move trailing closures
@@ -124,11 +128,11 @@ reversed = names.sorted {
 //: ending paranthesis. This is the same functinon call with the starting brace for the closure
 //: moved to the next line. This will not compile:
 //:
-//: reversed = sort(names)
-//: {
-//:   (s1: String, s2: String) -> Bool in
-//:   return s1 > s2
-//: }
+//:     reversed = sort(names)
+//:     {
+//:       (s1: String, s2: String) -> Bool in
+//:       return s1 > s2
+//:     }
 
 //: Let's jump back to our simplified closure ({$0 > $1}) and apply the trailing closure principle:
 reversed = names.sorted {$0 > $1}
@@ -149,8 +153,8 @@ returnValue {return 6}
 //: single-expresssion closures, it simplifies to this oddly-looking line of code:
 returnValue {6}
 
-//: ------------------------------------------------------------------------------------------------
-//: Capturing Values
+
+//: ## Capturing Values
 //:
 //: The idea of capturing is to allow a closure to access the variables and constants in their
 //: surrounding context.
@@ -203,3 +207,6 @@ anotherIncrementBy10() // returns 10
 
 //: Our first incrementor is still using its own context:
 incrementBy10() // returns 50
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

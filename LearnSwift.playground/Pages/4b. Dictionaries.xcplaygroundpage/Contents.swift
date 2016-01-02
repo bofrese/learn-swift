@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Dictionaries
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Dictionaries store multiple values of the same type, each associated with a key which acts as
 //:   an identifier for that value within the dictionary.
@@ -10,8 +14,7 @@
 //:   through explicit type annotation or through type inference.
 //: ------------------------------------------------------------------------------------------------
 
-//: ------------------------------------------------------------------------------------------------
-//: Creating a dictionary
+//: ## Creating a dictionary
 //:
 //: This is a Dictionary literal. They contain a comma-separated list of key:value pairs:
 ["TYO": "Tokyo", "DUB": "Dublin"]
@@ -30,8 +33,7 @@ var players: Dictionary<String, String> = ["Who" : "First", "What" : "Second"]
 //: values, so type inference works in our favor allowing us to avoid the type annotation:
 let inferredDictionary = ["TYO": "Tokyo", "DUB": "Dublin"]
 
-//: ------------------------------------------------------------------------------------------------
-//: Accessing and modifying a Dictionary
+//: ## Accessing and modifying a Dictionary
 //:
 //: Let's get a value from the dictionary for the TYO airport:
 airports["TYO"]
@@ -61,8 +63,7 @@ airports["APL"] = nil
 //: was already removed, so the return value will be a nil optional:
 var removedValue = airports.removeValueForKey("APL")
 
-//: ------------------------------------------------------------------------------------------------
-//: Iterating over a Dictionary
+//: ## Iterating over a Dictionary
 //:
 //: We can iterating over key/value pairs with a for-in loop, which uses a Tuple to hold the
 //: key/value pair for each entry in the Dictionary:
@@ -91,8 +92,7 @@ for airportName in airports.values
 var airportCodes = Array(airports.keys)
 var airportNames = Array(airports.values)
 
-//: ------------------------------------------------------------------------------------------------
-//: Creating an empty Dictionary
+//: ## Creating an empty Dictionary
 //:
 //: Here, we create an empty Dictionary of Int keys and String values:
 var namesOfIntegers = Dictionary<Int, String>()
@@ -124,3 +124,5 @@ copiedAges["Peter"] = 24
 //: And we can see that the original is not changed:
 ages["Peter"]
 
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

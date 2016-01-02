@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Enumerations
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Enumerations in Swift are different from their popular counterparts in C-like languages.
 //:   Rather that containing "one of a set of integer values" like most C-like languages, Swift's
@@ -17,7 +21,7 @@
 //:   that type is Int, then they will behave more like their C-style counterparts.
 //: ------------------------------------------------------------------------------------------------
 
-//: Here is the simple enumeration.
+//: ## Here is the simple enumeration.
 //:
 //: Unlike their C counterparts, the members of the enumeration below are not integer values (0,
 //: 1, 2, etc.) Instead, each member is a fully-fledged value in its own right.
@@ -64,8 +68,8 @@ switch directionToHead
 		"West"
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Associated Values
+
+//: ## Associated Values
 //:
 //: Associated values allows us to store information with each member of the switch using a Tuple.
 //:
@@ -105,8 +109,8 @@ switch productBarcode
 		"QR: \(productCode)"
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Raw values
+
+//: ## Raw values
 //:
 //: We can assign a type to an enumeration. If we use Int as the type, then we are effectively
 //: making an enumeration that functions like its C counterpart:
@@ -158,3 +162,6 @@ pet = FamilyPet(rawValue: "Snake")
 if pet != .None { "We have a pet" }
 else { "No pet :(" }
 
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

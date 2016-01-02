@@ -1,5 +1,9 @@
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Optionals
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * An optional value is a stored value that can either hold a value or "no value at all"
 //:
@@ -12,12 +16,10 @@
 //: we set an optional Int value to .None (similar to nil)
 let someOptional: Int? = .None
 
-//: TODO: Swift 2 does not support toInt, change description! /BF
-
-//: Let's try to convert a String to an Int
+//: ### Let's try to convert a String to an Int
 //:
-//: Using the String's toInt() method, we'll try to convert a string to a numeric value. Since not
-//: all strings can be converted to an Integer, the toInt() returns an optional, "Int?". This way
+//: Starting with Swift 2, we can use the Int initializer to convert a String to an Int. Since not
+//: all strings can be converted to an Integer, the Int("String") returns an optional, "Int?". This way
 //: we can recognize failed conversions without having to trap exceptions or use other arcane
 //: methods to recognize the failure.
 //:
@@ -38,8 +40,8 @@ optionalConvertedNumber
 //: If we assign it to a constant, the type of that constant will be an Optional Int (Int?)
 let unwrapped = optionalConvertedNumber // 'unwrapped' is another optional
 
-//: ------------------------------------------------------------------------------------------------
-//: Alternate syntax for Optionals
+
+//: ## Alternate syntax for Optionals
 //:
 //: The use of a "?" for the syntax of an optional is syntactic sugar for the use of the Generic
 //: Optional type defined in Swift's standard library. We haven't gotten into Generics yet, but
@@ -49,8 +51,7 @@ let unwrapped = optionalConvertedNumber // 'unwrapped' is another optional
 let optionalA: String? = .None
 let optionalB: Optional<String> = .None
 
-//: ------------------------------------------------------------------------------------------------
-//: Unwrapping
+//: ## Unwrapping
 //:
 //: The difference between Int and Int? is important. Optionals essentially "wrap" their contents
 //: which means that Int and Int? are two different types (with the latter being wrapped in an
@@ -59,7 +60,7 @@ let optionalB: Optional<String> = .None
 //: We can't explicity convert to an Int because that's not the same as an Int?. The following
 //: line won't compile:
 //:
-//: let unwrappedInt: Int = optionalConvertedNumber
+//:     let unwrappedInt: Int = optionalConvertedNumber
 
 //: One way to do this is to "force unwrap" the value using the "!" symbol, like this:
 let unwrappedInt = optionalConvertedNumber!
@@ -78,8 +79,8 @@ else
 	"Nothing to see here, go away"
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Optional Binding
+
+//: ## Optional Binding
 //:
 //: We can conditionally store the unwrapped value to a stored value if the optional holds a value.
 //:
@@ -113,7 +114,7 @@ if let optionalIntValue:Int? = optionalConvertedNumber
 	}
 }
 
-//: Setting an optional to 'nil' sets it to be contain "no value"
+//: Setting an optional to `nil` sets it to be contain "no value"
 optionalConvertedNumber = nil
 
 //: Now if we check it, we see that it holds no value:
@@ -141,7 +142,7 @@ else
 //:
 //: The following line will not compile
 //:
-//: var failure: String = nil // Won't compile
+//:     var failure: String = nil // Won't compile
 
 //: The following line will compile, because the String is optional
 var noString: String? = nil
@@ -170,12 +171,12 @@ let copyOfAssumedString: String = assumedString
 //: unwrap it.) So by doing this, we are taking a risk:
 assumedString = nil
 
-//: BE SURE that your implicitly unwrapped optionals actually hold values!
+//: > __BE SURE that your implicitly unwrapped optionals actually hold values!__
 //:
 //: The following line will compile, but will generate a runtime error because of the automatic
 //: unwrapping.
 //:
-//: let errorString: String = assumedString
+//:     let errorString: String = assumedString
 
 //: Like any other optional, we can still check if it holds a value:
 if assumedString != nil
@@ -186,3 +187,8 @@ else
 {
 	"No value"
 }
+
+
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:

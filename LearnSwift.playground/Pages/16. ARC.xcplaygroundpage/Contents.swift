@@ -1,5 +1,9 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # ARC
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Automatic Reference Counting allows Swift to track and manage your app's memory usage. It
 //:   automatically frees up memory from unused instances that are no longer in use.
@@ -38,15 +42,15 @@ var copyOfPerson = person
 //: reference count down to 1.
 person = nil
 
-//: The copyOfPerson still exists and holds a strong reference to our instance:
+//: The `copyOfPerson` still exists and holds a strong reference to our instance:
 copyOfPerson
 
 //: If we clear out this reference, we will drop the reference count once more to 0, causing the
 //: object to be cleaned up by ARC:
 copyOfPerson = nil
 
-//: ------------------------------------------------------------------------------------------------
-//: Strong Reference Cycles between class instances
+
+//: ## Strong Reference Cycles between class instances
 //:
 //: If two classes hold a reference to each other, then they create a "Strong Reference Cycle".
 //:
@@ -98,8 +102,9 @@ number73 = nil
 //: At this point, we have two instances that still exist in memory, but cannot be cleaned up
 //: because we don't have any references to them in order to solve the problem.
 
-//: ------------------------------------------------------------------------------------------------
-//: Resolving Strong Reference Cycles between Class Instances
+
+
+//: ## Resolving Strong Reference Cycles between Class Instances
 //:
 //: Swift provides two methods to resolve strong reference cycles: weak and unowned references.
 
@@ -162,8 +167,8 @@ jerry = nil
 //: If we clear 'number74' then we'll remove the last remaining strong reference:
 number74 = nil
 
-//: ------------------------------------------------------------------------------------------------
-//: Unowned References
+
+//: ## Unowned References
 //:
 //: Unowned refernces are similar to weak references in that they do not hold a strong reference
 //: to an instance. However, the key difference is that if the object the reference is deallocated
@@ -200,8 +205,7 @@ class CreditCard
 	}
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Unowned References and Implicitly Unwrapped Optional Properties
+//: ## Unowned References and Implicitly Unwrapped Optional Properties
 //:
 //: We've covered two common scenarios of cyclic references, but there is a third case. Consider
 //: the case of a country and its capital city. Unlike the case where a customer may have a credit
@@ -262,8 +266,8 @@ var america = Country(name: "USA", capitalName: "Washington DC")
 //: optinoal property so that we can avoid having to deal with unwrapping 'capitalCity' whenever we
 //: want to access it.
 
-//: ------------------------------------------------------------------------------------------------
-//: Strong Reference Cycles for Closures
+
+//: ## Strong Reference Cycles for Closures
 //:
 //: We've seen how classes can reference each other creating a cyclic reference because classes are
 //: reference types. However, classes aren't the only way to create a cyclic reference. These
@@ -369,3 +373,6 @@ class FixedHTMLElement
 
 //: Playgrounds do not allow us to test/prove this, so feel free to plug this into a compiled
 //: application to see it in action.
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

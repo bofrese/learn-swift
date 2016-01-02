@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Extensions
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Similar to Objective-C categories, extensions allow you to add functionality to an existing
 //:   type (class, struct, enumeration.)
@@ -30,8 +34,8 @@ extension Int
 	// ... code here
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Computed properties
+
+//: ## Computed properties
 //:
 //: Computed properties are a poweful use of extensions. Below, we'll add native conversion from
 //: various measurements (Km, mm, feet, etc.) to the Double class.
@@ -50,8 +54,8 @@ let oneInchInMeters = 1.inchToMeters
 //: Similarly, we'll convert three feet to meters
 let threeFeetInMeters = 3.ftToMeters
 
-//: ------------------------------------------------------------------------------------------------
-//: Initializers
+
+//: ## Initializers
 //:
 //: Extensions can be used to add new convenience initializers to a class, but they cannot add
 //: new designated initializers.
@@ -97,8 +101,8 @@ let centerRect = Rect(center: Point(x: 4.0, y: 4.0), size: Size(width: 3.0, heig
 //: to Swift's memberwise initializer:
 var anotherRect = Rect(origin: Point(x: 1.0, y: 1.0), size: Size(width: 3.0, height: 2.0))
 
-//: ------------------------------------------------------------------------------------------------
-//: Methods
+
+//: ## Methods
 //:
 //: As you might expect, we can add methods to an existing type as well. Here's a clever little
 //: extention to perform a task (a closure) multiple times, equal to the value stored in the Int.
@@ -132,8 +136,8 @@ extension Int
 var someInt = 3
 someInt.square() // someInt is now 9
 
-//: ------------------------------------------------------------------------------------------------
-//: Subscripts
+
+//: ## Subscripts
 //:
 //: Let's add a subscript to Int:
 extension Int
@@ -158,8 +162,8 @@ extension Int
 123456789[5]
 123456789[6]
 
-//: ------------------------------------------------------------------------------------------------
-//: Nested types
+
+//: ## Nested types
 //:
 //: We can also add nested types to an existing type:
 extension Character
@@ -187,3 +191,7 @@ extension Character
 Character("a").kind == .Vowel
 Character("h").kind == .Consonant
 Character("+").kind == .Other
+
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Generics
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Generics allow flexible, reusable functions and types that can work with any type, subject
 //:   to restrictions that you define.
@@ -69,8 +73,7 @@ swapTwoValues(&aString, &bString)
 aString
 bString
 
-//: ------------------------------------------------------------------------------------------------
-//: Generic Types
+//: ## Generic Types
 //:
 //: So far we've seen how to apply Generics to a function, let's see how they can be applied to
 //: a struct. We'll define a standard 'stack' implementation which works like an array that can
@@ -105,8 +108,7 @@ stackOfStrings.pop()
 stackOfStrings.pop()
 stackOfStrings.pop()
 
-//: ------------------------------------------------------------------------------------------------
-//: Type constraints
+//: ## Type constraints
 //:
 //: So far, our type parameters are completely Generic - they can represent any given type.
 //: Sometimes we may want to apply constraints to those types. For example, the Swift Dictionary
@@ -149,8 +151,8 @@ func findIndex<T: Equatable>(array: [T], valueToFind: T) -> Int?
 let doubleIndex = findIndex([3.14159, 0.1, 0.25], 9.3)
 let stringIndex = findIndex(["Mike", "Malcolm", "Andrea"], "Andrea")
 
-//: ------------------------------------------------------------------------------------------------
-//: Associated types
+
+//: ## Associated types
 //:
 //: Protocols use a different method of defining generic types, called Associated Types, which use
 //: type inference combined with Type Aliases.
@@ -231,8 +233,8 @@ doubleStack.count
 //: String without the need to modify String other than to extend it to conform to the protocol:
 extension Array: Container {}
 
-//: ------------------------------------------------------------------------------------------------
-//: Where Clauses
+
+//: ## Where Clauses
 //:
 //: We can further extend our constraints on a type by including where clauses as part of a type
 //: parameter list. Where clauses provide a means for more constraints on associated types and/or
@@ -288,4 +290,8 @@ allItemsMatch(stringStack, ["Alpha", "Beta", "Theta"])
 //:
 //: The following line of code does not compile:
 //:
-//: allItemsMatch(stringStack, doubleStack)
+//:     allItemsMatch(stringStack, doubleStack)
+
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

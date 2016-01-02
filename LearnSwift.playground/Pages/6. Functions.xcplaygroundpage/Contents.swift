@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Functions
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Like most other languages, functions contain units of code to perform a task, but there are
 //:   a few key featurs of functions in Swift.
@@ -15,7 +19,7 @@
 //:   is returned by the parent function.
 //: ------------------------------------------------------------------------------------------------
 
-//: Here's a simple function that receives a Single string and returns a String
+//: ## Here's a simple function that receives a Single string and returns a String
 //:
 //: Note that each parameter has a local name (for use within the function) and a standard type
 //: annotation. The return value's type is at the end of the function, following the ->.
@@ -71,8 +75,7 @@ var appInfo = getApplicationInfo()
 appInfo.name
 appInfo.version
 
-//: ------------------------------------------------------------------------------------------------
-//: External Parameter Names
+//: ## External Parameter Names
 //:
 //: We can use Objective-C-like external parameter names so the caller must name the external
 //: parameters when they call the function. The extenal name appears before the local name.
@@ -134,8 +137,7 @@ anotherAddMul(1, 2)
 //: And now we can call with an un-named third parameter:
 anotherAddMul(1, 2, 9)
 
-//: ------------------------------------------------------------------------------------------------
-//: Variadic Parameters
+//: ## Variadic Parameters
 //:
 //: Variadic parameters allow you to call functions with zero or more values of a specified type.
 //:
@@ -213,8 +215,7 @@ yetAnotherArithmeticMean(initialTotal: 1, values: 2, 3, 4)
 yetAnotherArithmeticMean(initialTotal: 1, values: 2, 3, 4, 5)
 yetAnotherArithmeticMean(initialTotal: 1, values: 2, 3, 4, 5, 6)
 
-//: ------------------------------------------------------------------------------------------------
-//: Constant and variable parameters
+//: ## Constant and variable parameters
 //:
 //: All function parameters are constant by default. To make them variable, add the var introducer:
 func padString(var str: String, pad: Character, count: Int) -> String
@@ -230,8 +231,7 @@ padString(paddedString, ".", 10)
 //: because the value is still passed by value:
 paddedString
 
-//: ------------------------------------------------------------------------------------------------
-//: In-Out Parameters
+//: ## In-Out Parameters
 //:
 //: In-Out parameters allow us to force a parameter to be passed by reference so those changes can
 //: persist after the function call.
@@ -260,8 +260,7 @@ swap(&one, &two)
 one
 two
 
-//: ------------------------------------------------------------------------------------------------
-//: Function types
+//: ## Function types
 //:
 //: The type of a function is comprised of the specific parameter list (the number of parameters as
 //: well as their type) and the return value's type.
@@ -373,3 +372,6 @@ let returnFive = getReturnFive()
 
 //: Here we call the nested function:
 returnFive()
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

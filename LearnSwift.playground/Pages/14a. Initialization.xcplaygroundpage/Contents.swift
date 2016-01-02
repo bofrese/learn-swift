@@ -1,5 +1,9 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Initialization
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Swift provides an initializer (which partially resembles a function) to ensure that every
 //:   property in a class, structure or enumeration is fully initialized.
@@ -8,7 +12,7 @@
 //:   default value is provided.
 //: ------------------------------------------------------------------------------------------------
 
-//: Here's a basic use of an initializer.
+//: ## Here's a basic use of an initializer.
 //:
 //: The Fahrenheit class will create a 'temperature' property that does not have a default value.
 //: Because there is no default value, the property must be initialized in the initializer.
@@ -145,8 +149,8 @@ let noQuestion = SurveyQuestion2()
 //: Here, we'll us an aalternat initializer to specify a different value for 'text'
 let beetsQuestion = SurveyQuestion2(text: "Do you like beets?")
 
-//: ------------------------------------------------------------------------------------------------
-//: Default Initializer
+
+//: ## Default Initializer
 //:
 //: If all properties have default values (including optionals defaulting to nil) AND you do not
 //: create your own initlializer AND there is no superclass, Swift will create a default
@@ -165,8 +169,8 @@ class ShoppingListItem
 	// No init(...) initializer
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Memberwise Initializers for Structure Types
+
+//: ## Memberwise Initializers for Structure Types
 //:
 //: Similar to the default initializer for classes, structures that do not implement an initializer
 //: but have default values for their stored properties will get a default memberwise initializer.
@@ -182,8 +186,8 @@ struct Size
 //: Here, we call the default memberwise initializer that Swift created for us
 let twoByTwo = Size(width: 2.0, height: 2.0)
 
-//: ------------------------------------------------------------------------------------------------
-//: Initializer Delegatgion for Value Types
+
+//: ## Initializer Delegatgion for Value Types
 //:
 //: Sometimes, it's convenient to have multiple initializers that call other initializers to do
 //: some of the heavy lifting.
@@ -230,3 +234,6 @@ struct Rect
 let basicRect = Rect()
 let originRect = Rect(origin: Point(x: 2.0, y: 2.0), size: Size(width: 5.0, height: 5.0))
 let centerRect = Rect(center: Point(x: 4.0, y: 4.0), size: Size(width: 3.0, height: 3.0))
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

@@ -1,5 +1,7 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//: # Properties
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Properties store values in classes, structures and enumerations.
 //: ------------------------------------------------------------------------------------------------
@@ -16,15 +18,14 @@ struct FixedLengthRange
 //: This won't compile since the struct includes properties that havn't been initialized with
 //: default values:
 //:
-//: var anotherRangeOfThreeItems = FixedLengthRange()
+//:     var anotherRangeOfThreeItems = FixedLengthRange()
 //:
 //: In order to instantiate a FixedLengthRange struct, we must use the memberwise initializer. Note
 //: that this will initialize a constant property and a variable property inside the struct:
 var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
 rangeOfThreeItems.firstValue = 6
 
-//: ------------------------------------------------------------------------------------------------
-//: Lazy Stored Properties
+//: ## Lazy Stored Properties
 //:
 //: A Lazy Stored Property is a value that is not calculated until its first use.
 //:
@@ -61,8 +62,7 @@ manager.importer.filename
 //: And now we see the importer was created:
 manager
 
-//: ------------------------------------------------------------------------------------------------
-//: Computed Properties
+//: ## Computed Properties
 //:
 //: Computed properties don't store data, but rather use getters and setters for accessing values
 //: that are computed up on request.
@@ -182,10 +182,10 @@ cube.volume
 //:
 //: The following line of code will not compile:
 //:
-//: cube.volume = 8.0
+//:     cube.volume = 8.0
 
-//: ------------------------------------------------------------------------------------------------
-//: Property Observers
+
+//: ## Property Observers
 //:
 //: Property observers allow us to respond to changes in a property's value. We can declare an
 //: observer that contains our code that is run just before a property is set (optionally allowing
@@ -249,8 +249,8 @@ var stepper = StepCounterShorterWithModify()
 stepper.totalSteps = 345
 stepper.totalSteps // This reports totalSteps is now set to 89
 
-//: ------------------------------------------------------------------------------------------------
-//: Type Properties
+
+//: ## Type Properties
 //:
 //: Until now, we've been working with Instance Properties and Instance Methods, which are
 //: associated to an instance of a class, structure or enumeration. Each instance gets its own copy
@@ -299,3 +299,5 @@ class SomeClass
 	class var computedTypeProperty: Int { return 4 }
 }
 
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

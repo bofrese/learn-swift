@@ -1,5 +1,9 @@
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Tuples
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Tuples are groups of values combined into a single, compound value
 //: ------------------------------------------------------------------------------------------------
@@ -12,7 +16,7 @@ let httpError404 = (404, "Not found")
 //: We can also specify the type in order to avoid inferrence
 let someOtherTuple = (Double(100), Bool(false))
 
-//: Decomposing typles looks like this
+//: Decomposing tuples looks like this
 let (statusCode, statusMessage) = httpError404
 statusCode
 statusMessage
@@ -34,3 +38,7 @@ let namedTuple = (statusCode: 404, message: "Not found")
 namedTuple.statusCode == namedTuple.0
 namedTuple.message == namedTuple.1
 
+
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:

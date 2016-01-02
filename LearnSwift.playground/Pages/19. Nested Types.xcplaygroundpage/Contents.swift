@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Nested Types 
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Nested types are utility classes and structures that are declared within other classes,
 //:   structures and enumerations.
@@ -85,3 +89,6 @@ theAceOfSpades.description
 
 //: To access the nested type, we can drill down into the type using type names:
 let heartsSymbol = String( BlackjackCard.Suit.Hearts.rawValue )
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

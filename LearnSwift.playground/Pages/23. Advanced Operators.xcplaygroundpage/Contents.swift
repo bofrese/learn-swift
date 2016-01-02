@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Advanced Operators
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Arithmetic operators in Swift do not automatically overflow. Adding two values that overflow
 //:   their type (for example, storing 300 in a UInt8) will cause an error. There are special
@@ -9,8 +13,7 @@
 //:   currently define. You can even specify the associativity and precedence for operators.
 //: ------------------------------------------------------------------------------------------------
 
-//: ------------------------------------------------------------------------------------------------
-//: Bitwise Operators
+//: ## Bitwise Operators
 //:
 //: The Bitwise operators (AND, OR, XOR, etc.) in Swift effeectively mirror the functionality that
 //: you're used to with C++ and Objective-C.
@@ -35,7 +38,7 @@ var xorResult: UInt8 =
    0b11110000
 // 0b10100101 <- result
 
-//: Shifting in Swift is slightly different than in C++.
+//: ### Shifting in Swift is slightly different than in C++.
 //: 
 //: A lesser-known fact about C++ is that the signed right-shift of a signed value is
 //: implementation specific. Most compilers do what most programmers expect, which is an arithmetic
@@ -51,8 +54,7 @@ var rightShiftUnsignedResult: UInt8 = 32 >> 1
 var rightShiftSignedResult: Int8 = 32 >> 1
 var rightShiftSignedNegativeResult: Int8 = -32 >> 1
 
-//: ------------------------------------------------------------------------------------------------
-//: Overflow operators
+//: ## Overflow operators
 //:
 //: If an arithmetic operation (specifically addition (+), subtraction (-) and multiplication (*))
 //: results in a value too large or too small for the constant or variable that the result is
@@ -60,10 +62,10 @@ var rightShiftSignedNegativeResult: Int8 = -32 >> 1
 //:
 //: The last two lines of this code block will trigger an overflow/underflow:
 //:
-//:	var positive: Int8 = 120
-//:	var negative: Int8 = -120
-//:	var overflow: Int8 = positive + positive
-//:	var underflow: Int8 = negative + negative
+//:	    var positive: Int8 = 120
+//:	    var negative: Int8 = -120
+//:	    var overflow: Int8 = positive + positive
+//:	    var underflow: Int8 = negative + negative
 //:
 //: This is also true for division by zero, which can be caused with the division (/) or remainder
 //: (%) operators.
@@ -84,8 +86,8 @@ var overflowMul: Int8 = someValue &* someValue
 var divByZero: Int8 = 100 &/ aZero
 var remainderDivByZero: Int8 = 100 &% aZero
 
-//: ------------------------------------------------------------------------------------------------
-//: Operator Functions (a.k.a., Operator Overloading)
+
+//: ## Operator Functions (a.k.a., Operator Overloading)
 //:
 //: Most C++ programmers should be familiar with the concept of operator overloading. Swift offers
 //: the same kind of functionality as well as additional functionality of specifying the operator
@@ -188,8 +190,8 @@ func != (left: Vector2D, right: Vector2D) -> Bool
 	return !(left == right)
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Custom Operators
+
+//: ## Custom Operators
 //:
 //: So far, we've been defining operator functions for operators that Swift understands and
 //: for which Swift provides defined behaviors. We can also define our own custom operators for
@@ -218,8 +220,8 @@ prefix func +++ (inout vector: Vector2D) -> Vector2D
 var someVector = Vector2D(x: 5.0, y: 9.0)
 +++someVector
 
-//: ------------------------------------------------------------------------------------------------
-//: Precedence and Associativity for Custom Infix Operators
+
+//: ## Precedence and Associativity for Custom Infix Operators
 //:
 //: Custom infix operators can define their own associativity (left-to-right or right-to-left or
 //: none) as well as a precedence for determining the order of operations.
@@ -257,3 +259,7 @@ func +- (left: Vector2D, right: Vector2D) -> Vector2D
 var first = Vector2D(x: 5.0, y: 5.0)
 var second = Vector2D(x: -5.0, y: 5.0)
 first +- second
+
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Arrays
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Arrays are ordered lists of elements
 //:
@@ -36,8 +40,7 @@ var commonPets: [String] = ["Cats", "Dogs"]
 //: The folowing is an array of Strings
 var shoppingList = ["Eggs", "Milk"]
 
-//: ------------------------------------------------------------------------------------------------
-//: Accessing and modifying an Array
+//: ## Accessing and modifying an Array
 //:
 //: We can get the number of elements
 shoppingList.count
@@ -78,8 +81,7 @@ shoppingList.insert("Maple Syrup", atIndex: 3)
 //: into a stored value
 let apples = shoppingList.removeLast()
 
-//: ------------------------------------------------------------------------------------------------
-//: Enumeration
+//: ## Enumeration
 //:
 //: We can iterate over the the array using a for-in loop
 for item in shoppingList
@@ -95,8 +97,7 @@ for (index, value) in enumerate(shoppingList)
 	value
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Creating and initializing an array
+//: ## Creating and initializing an array
 //:
 //: Earlier, we saw how to declare an array of a given type. Here, we see how to declare an array
 //: type and then assign it to a stored value, which gets its type by inference:
@@ -132,8 +133,8 @@ let immutableArray = ["a", "b"]
 //:
 //: immutableArray += "c"
 
-//: ------------------------------------------------------------------------------------------------
-//: Arrays are Value Types
+
+//: ## Arrays are Value Types
 //:
 //: Arrays are value types that only copy when necessary, which is only when the array itself
 //: changes (not the contents.)
@@ -163,3 +164,6 @@ a
 b
 c
 
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

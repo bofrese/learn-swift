@@ -1,5 +1,9 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Inheritance
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * There is no default base class for Swift objects. Any class that doesn't derive from
 //:   another class is a base class.
@@ -24,8 +28,8 @@ class Vehicle
 	}
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Subclasses
+
+//: ## Subclasses
 //:
 //: Now let's subclass the Vehicle to create a two-wheeled vehicle called a Bicycle
 class Bicycle: Vehicle
@@ -83,8 +87,8 @@ let car = Car()
 car.speed = 55
 car.description()
 
-//: ------------------------------------------------------------------------------------------------
-//: Overriding Properties
+
+//: ## Overriding Properties
 //:
 //: We can override property getters and setters. This applies to any property, including stored and
 //: computed properties
@@ -140,8 +144,8 @@ var automaticCar = AutomaticCar()
 automaticCar.speed = 35.0
 automaticCar.gear
 
-//: ------------------------------------------------------------------------------------------------
-//: Preenting Overrides
+
+//: ## Preenting Overrides
 //:
 //: We can prevent a subclass from overriding a particular method or property using the 'final'
 //: keyword.
@@ -162,3 +166,6 @@ final class AnotherAutomaticCar: Car
 		didSet { gear = Int(speed / 10.0) + 1 }
 	}
 }
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

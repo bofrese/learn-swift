@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Type Casting 
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Type casting allows us to check the type of an instance and/or treat that instance as a
 //:   different type from somewhere else in its own hieararchy.
@@ -47,8 +51,7 @@ let library =
 	Song(name: "Never Gunna Give You Up", artist: "Rick Astley")
 ]
 
-//: ------------------------------------------------------------------------------------------------
-//: Checking type
+//: ## Checking type
 //:
 //: We can check the type of an object very simply with the 'is' operator, also known as the Type
 //: Check Operator.
@@ -68,8 +71,8 @@ for item in library
 movieCount
 songCount
 
-//: ------------------------------------------------------------------------------------------------
-//: Downcasting
+
+//: ## Downcasting
 //:
 //: As with other languages, downcasting refers to casting an object to a subclass within its
 //: hierarchy. This is done with the Type Cast Operator, "as".
@@ -94,8 +97,8 @@ for item in library
 	}
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Type Casting for Any and AnyObject
+
+//: ## Type Casting for Any and AnyObject
 //:
 //: * AnyObject allows us to store an instance to any class type.
 //:
@@ -186,3 +189,7 @@ for thing in things
 			"Something else"
 	}
 }
+
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)

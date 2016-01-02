@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Protocols
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Protocols define a required set of functionality (including methods and properties) for a
 //:   class, structure or enumeration.
@@ -29,8 +33,8 @@
 //:		}
 //: ------------------------------------------------------------------------------------------------
 
-//: ------------------------------------------------------------------------------------------------
-//: Property requirements
+
+//: ## Property requirements
 //:
 //: * A protocol can require the conforming type to provide an instance of a property or type
 //:   property.
@@ -96,8 +100,8 @@ class Starship: FullyNamed
 var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
 ncc1701.fullName
 
-//: ------------------------------------------------------------------------------------------------
-//: Method Requirements
+
+//: ## Method Requirements
 //:
 //: Similar to property requirements, the protocol only defines the method type, not the
 //: implementation.
@@ -135,8 +139,8 @@ generator.random()
 generator.random()
 generator.random()
 
-//: ------------------------------------------------------------------------------------------------
-//: Protocols as Types
+
+//: ## Protocols as Types
 //:
 //: Protocols are types, which means they can be used where many other types are allowed,
 //: including:
@@ -172,8 +176,8 @@ d6.roll()
 d6.roll()
 d6.roll()
 
-//: ------------------------------------------------------------------------------------------------
-//: Adding Protocol Conformance with an Extension
+
+//: ## Adding Protocol Conformance with an Extension
 //:
 //: Existing classes, structures and enumerations can be extended to conform to a given protocol.
 //:
@@ -196,8 +200,8 @@ extension Dice: TextRepresentable
 //: though it was declared prior to the extension.
 d6.asText()
 
-//: ------------------------------------------------------------------------------------------------
-//: Declaring Protocol Adoption with an Extension
+
+//: ## Declaring Protocol Adoption with an Extension
 //:
 //: Some types may already adopt a protocol, but do not state so in their definition. Types do not
 //: automatically adopt to protocols whose requirements they satisfy - protocol adoption must
@@ -229,8 +233,8 @@ extension Hamster: TextRepresentable
 	
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Collections of Protocol Types
+
+//: ## Collections of Protocol Types
 //:
 //: Hamsters and Dice don't have much in common, but in our sample code above, they both conform
 //: to the TextRepresentable protocol. Because of this, we can create an array of things that are
@@ -243,8 +247,8 @@ for thing in textRepresentableThigns
 	thing.asText()
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Protocol Inheritance
+
+//: ## Protocol Inheritance
 //:
 //: Protocols can inherit from other protocols in order to add further requirements. The syntax
 //: for this is similar to a class ineriting from its superclass.
@@ -270,8 +274,8 @@ extension Dice: PrettyTextRepresentable
 //: We can test our work:
 d6.asPrettyText()
 
-//: ------------------------------------------------------------------------------------------------
-//: Protocol Composition
+
+//: ## Protocol Composition
 //:
 //: Protocols can be combined such that a type conforms to each of them. For example, a person can
 //: be an aged person as well as a named person.
@@ -307,8 +311,8 @@ func wishHappyBirthday(celebrator: protocol<Named, Aged>) -> String
 //: If we call the member, we can see the celebratory wish for this individual:
 wishHappyBirthday(Individual(name: "Bill", age: 31))
 
-//: ------------------------------------------------------------------------------------------------
-//: Checking for Protocol Conformance
+
+//: ## Checking for Protocol Conformance
 //:
 //: We can use 'is' and 'as' for testing for protocol conformance, just as we've seen in the
 //: section on Type Casting.
@@ -353,8 +357,8 @@ objects[0] is HasArea
 objects[1] is HasArea
 objects[2] is HasArea
 
-//: ------------------------------------------------------------------------------------------------
-//: Optional Protocol Requirements
+
+//: ## Optional Protocol Requirements
 //:
 //: Sometimes it's convenient to declare protocols that have one or more requirements that are
 //: optional. This is done by prefixing those requirements with the 'optional' keyword.
@@ -406,3 +410,6 @@ objects[2] is HasArea
 		}
 	}
 }
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

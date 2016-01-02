@@ -1,13 +1,16 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Control Flow
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Much of the control flow in Swift is similar to C-like languages, but there are some key
 //:   differences. For example, switch-case constructs are much more flexible and powerful as well
 //:   as extensions to break and continue statements.
 //: ------------------------------------------------------------------------------------------------
 
-//: ------------------------------------------------------------------------------------------------
-//: For loops
+//: ## For loops
 //:
 //: We can loop through ranges using the closed-range operator ("...").
 //:
@@ -106,8 +109,8 @@ for index = 0; index < 3; ++index
 }
 index // Index holds 3 after running through the loop
 
-//: ------------------------------------------------------------------------------------------------
-//: While loops
+
+//: ## While loops
 //:
 //: While loops resemble other C-like languages. They perform the condition before each iteration
 //: through the loop:
@@ -124,8 +127,8 @@ do
 	++index
 } while (index < 3)
 
-//: ------------------------------------------------------------------------------------------------
-//: Conditional Statements
+
+//: ## Conditional Statements
 //:
 //: The if statement is very similar to C-like languages, except that the parenthesis are optional.
 //: You can also chain multiple conditions with 'else' and 'else if' statements:
@@ -175,15 +178,15 @@ switch someCharacter
 //: Otherwise you will get a compilation error. The following won't compile because there is an
 //: empty case statement:
 //:
-//: let anotherCharacter: Character = "a"
-//: switch anotherCharacter
-//: {
-//:		case "a":
-//:		case "A":
-//:			"the letter a"
-//:		default:
-//:			"not the letter a"
-//:	}
+//:     let anotherCharacter: Character = "a"
+//:     switch anotherCharacter
+//:     {
+//:		    case "a":
+//:		    case "A":
+//:			    "the letter a"
+//:		    default:
+//:			    "not the letter a"
+//:	    }
 
 //: We can perform range matching for cases:
 let count = 3_000_000_000_000
@@ -286,8 +289,7 @@ switch yetAnotherPoint
 		"Just some arbitrary point"
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Control transfer statements
+//: ## Control transfer statements
 //:
 //: Swift supports extended versions of continue and break as well as an additional 'fallthrough'
 //: statement for switch-case constructs.
@@ -411,3 +413,6 @@ nameLoop: for name in names
 	}
 }
 result
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

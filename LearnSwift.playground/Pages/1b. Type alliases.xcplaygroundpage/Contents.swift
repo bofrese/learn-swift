@@ -1,5 +1,9 @@
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Type Aliases
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Type Aliases allow you to provide a different name for types,
 //:   similar to 'typedef' in C.
@@ -20,3 +24,6 @@ struct MySimpleStruct
 typealias MyAliasedName = MySimpleStruct
 MyAliasedName.a
 
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:

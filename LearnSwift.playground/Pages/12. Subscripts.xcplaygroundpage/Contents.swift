@@ -1,5 +1,9 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Subscripts
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Subscripts allow you to declare functionality for instances to make use of the subscript
 //:   operator ( [] ).
@@ -80,3 +84,7 @@ matrix[0,0] = 1
 matrix[1,1] = 1
 matrix[2,2] = 1
 matrix[3,3] = 1
+
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

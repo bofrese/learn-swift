@@ -1,12 +1,16 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Methods
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Methods can be in the form of Instance Methods, which apply to a given instance of a class
 //:   struct or enumeration and Type Methods, which apply to the type itself, like static methods
 //:   in C-like languages.
 //: ------------------------------------------------------------------------------------------------
 
-//: Instance Methods
+//: ## Instance Methods
 //:
 //: Instance methods work on instances of a class, structure or enumeration. In order to call an
 //: instance method, you must first instantiate the class, structure or enumeration and then place
@@ -118,8 +122,8 @@ class Point
 	}
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Mutation
+
+//: ## Mutation
 //:
 //: Instance methods cannot by default modify properties of structures or enumerations. To enable
 //: this, mark them as 'mutating':
@@ -141,7 +145,7 @@ let fixedPoint = Point2(x: 3)
 //:
 //: The following line won't compile:
 //:
-//: fixedPoint.setX(4)
+//:     fixedPoint.setX(4)
 
 //: If you're working with a structure or enumeration (not a class), uou can assign to 'self'
 //: directly
@@ -175,8 +179,8 @@ enum TriStateSwitch
 	}
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Type Methods
+
+//: ## Type Methods
 //:
 //: Type methods are like C++'s static methods.
 //:
@@ -219,7 +223,7 @@ var levelTracker = LevelTracker()
 
 //: The following line will not compile:
 //:
-//: levelTracker.levelIsUnlocked(3)
+//:     levelTracker.levelIsUnlocked(3)
 
 //: For classes, type methods use the 'class' keyword rather than the 'static' keyword:
 class SomeOtherClass
@@ -232,3 +236,6 @@ class SomeOtherClass
 
 //: We call class type methods with the type name just as we do for structures and enumerations:
 SomeOtherClass.isGreaterThan100(105)
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

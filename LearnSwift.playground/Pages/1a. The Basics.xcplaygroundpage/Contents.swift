@@ -1,40 +1,35 @@
-//: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |   [Next Page](@next)
 //:
-//: * Swift is Apple's new programming language for iOS and OSX. If you know C or Objective-C, then
-//:   these playgrounds should serve as a solid primer for making the switch to Swift.
+//: # The Basics
 //:
-//: * Some experience programming in a C-like langauge is expected. If not, then I'm sorry but
-//:   you're just not the target audience.
-//: ------------------------------------------------------------------------------------------------
-
-//: ------------------------------------------------------------------------------------------------
-//: Constants & Variables - These are known as "Stored Values" in Swift
-
+//: ## Constants & Variables - These are known as "Stored Values" in Swift
 //: Use the 'let' keyword to define a constant
+
 let maximumNumberOfLoginAttempts = 10
 
-//: Use the 'var' keyword to define a variable
+//: Use the `var` keyword to define a variable
 //:
-//: Tip: only use variables when you need a stored value that changes. Otherwise, prefer constants.
+//: > _Tip: only use variables when you need a stored value that changes. Otherwise, prefer constants._
 var currentLoginAttempt = 0
 
 //: Constants cannot change. This line wouldn't compile:
-//: maximumNumberOfLoginAttempts = 9
-
+//:
+//:       maximumNumberOfLoginAttempts = 9
+//:
 //: Variables can change:
 currentLoginAttempt += 1
 
 //: You also can't redeclare a variable or constant once it has been declared. These lines
 //: won't compile:
-// let maximumNumberOfLoginAttempts = 10
-// var currentLoginAttempt = "Some string which is not an Int"
-
+//:
+//:     let maximumNumberOfLoginAttempts = 10
+//:     var currentLoginAttempt = "Some string which is not an Int"
+//:
 //: You can combine them on a single line with a comma
 let a = 10, b = 20, c = 30
 var x = 0.0, y = 0.0, z = 0.0
 
-//: Specifying the type with type annotations
+//: ### Specifying the type with type annotations
 //:
 //: The built-in types in Swift are: Int, Double, Float, Bool, String, Array, Dictionary
 //: There are variations of these (like UInt16), but those are the basic types. Note that all of
@@ -64,22 +59,21 @@ print("The current value of fiveHundred is: \(fiveHundred)")
 //: that evaluates to itself, printing the result in the right-hand pane in the playground, like so:
 "The current value of fiveHundred is: \(fiveHundred)"
 
-//: ------------------------------------------------------------------------------------------------
-//: A note about variable names
+//: ### A note about variable names
 //:
 //: As with most languages, you cannot give an identifier (such as a variable or constant name,
 //: class name, etc.) the same name as a keyword. For example, you can't define a constant named
-//: "let":
+//: `let`:
 //:
 //: The following line of code will not compile:
 //:
-//: let let = 0
+//:     let let = 0
 //:
 //: However, sometimes it would be convenient to do so and Swift provides a means to enable this
 //: by surrounding the identifier with backticks (`). Here's an example:
 let `let` = 42.0
 
-//: We can now use `let` like any normal variable:
+//: We can now use ` ``let`` ` like any normal variable:
 x = `let`
 
 //: This works for any keyword:
@@ -90,14 +84,15 @@ let `for` = "for"
 //: Additionally, it's important to know that this works on non-colliding identifier names:
 let `myConstant` = 123.456
 
-//: Also note that `myConstant` and myConstant refer to the same constant:
+//: Also note that ` ``myConstant`` ` and `myConstant` refer to the same constant:
 myConstant
 
-//: ------------------------------------------------------------------------------------------------
-//: Comments
+//: ## Comments
 //:
-//: You've probably already figured this out, but anything after the "//" is a comment. There's more
+//: You've probably already figured this out, but anything after the `//` is a comment. There's more
 //: to comments, though:
+
+// This is a single line comment
 
 /* This is a comment
    that spans multiple lines */
@@ -120,8 +115,7 @@ myConstant
     }
 */
 
-//: ------------------------------------------------------------------------------------------------
-//: Semicolons
+//: ## Semicolons
 //:
 //: Semicolons on the end of a line are optional, but the preferred style for Swift is to not use
 //: them to terminate lines.
@@ -132,8 +126,7 @@ var foo2 = 0; // optional semicolon
 //: them.
 foo1 = 1; foo2 = 2
 
-//: ------------------------------------------------------------------------------------------------
-//: Integers
+//: ## Integers
 //:
 //: There are multiple types of integers. Signed and unsigned with sizes of 8, 16, 32 and 64 bits.
 //: Here are a couple samples:
@@ -146,7 +139,8 @@ let randomNumber: Int32 = -34 // Signed 32-bit integer
 //:
 //: Similarly, there is
 //:
-//: Tip: For code interoperability, prefer Int over its counterparts.
+//: > _Tip: For code interoperability, prefer Int over its counterparts._
+
 let tirePressurePSI = 52
 
 //: To find the bounds of any integer, try ".min" or ".max"
@@ -155,15 +149,13 @@ UInt8.max
 Int32.min
 Int32.max
 
-//: ------------------------------------------------------------------------------------------------
-//: Floating point numbers
+//: ## Floating point numbers
 //:
 //: Double is a 64-bit floating point numbers and Float is a 32-bit floating point number
 let pi: Double = 3.14159
 let pie: Float = 100 // ... becase it's 100% delicious!
 
-//: ------------------------------------------------------------------------------------------------
-//: Type Safety and Type Inference
+//: ## Type Safety and Type Inference
 //:
 //: Swift is a strongly typed language, and as such, every stored value MUST have a type and can
 //: only be used where that specific type is expected.
@@ -184,12 +176,12 @@ let someString = "This will be a String"
 let someBool = true
 
 //: These lines won't compile because we are specifying a type that doesn't match the given value
-//: let someBool: Bool = 19
-//: let someInteger: Int = "45"
-//: let someOtherInt: Int = 45.6
+//:
+//:     let someBool: Bool = 19
+//:     let someInteger: Int = "45"
+//:     let someOtherInt: Int = 45.6
 
-//: ------------------------------------------------------------------------------------------------
-//: Numeric literals
+//: ## Numeric literals
 //:
 //: You can specify numbers in a few interesting ways
 let decimalInteger = 17
@@ -209,12 +201,13 @@ let hexInteger = 0x11 // ...and 17 in Hexidecimal
 000123.456 // Zero padding
 0__123.456 // Underscores are just ignored
 
-//: Numeric type conversion
-
+//: ### Numeric type conversion
+//:
 //: A number that won't fit in the given type will not compile
-//: let cannotBeNegative: UInt8 = -1
-//: let tooBig: Int8 = Int8.max + 1
-
+//:
+//:     let cannotBeNegative: UInt8 = -1
+//:     let tooBig: Int8 = Int8.max + 1
+//:
 //: Since the default type for numeric values is Int, you need to specify a different type
 let simpleInt = 2_000 // Int
 let twoThousand: UInt16 = 2_000 // Specified as UInt16
@@ -238,3 +231,7 @@ let negativePi = Int(-doublePi)
 //: Literal numerics work a little differently since the literal values don't have an explicit
 //: type assigned to them. Their type is only inferred at the point they are evaluated.
 let someValue = 3 + 0.14159
+
+//:
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:

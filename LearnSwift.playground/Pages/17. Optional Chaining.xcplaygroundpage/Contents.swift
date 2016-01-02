@@ -1,11 +1,15 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Optional Chaining 
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Optional Chaining is the process of safely referencing a series of optionals (which contain
 //:   optionals, which contain optionals, etc.) without having to perform the optional unwrapping
 //:   checks at each step along the way.
 //: ------------------------------------------------------------------------------------------------
-
+//:
 //: Consider a case of forced unwrapping like "someOptional!.someProperty". We already know that
 //: this is only safe if we know that the optional will never be nil. For times that we don't know
 //: this, we must check the optional before we can reference it. This can become cumbersome for
@@ -85,7 +89,11 @@ person
 //: example of how to use optional chaining syntax in various situations. Given the proper context
 //: this line of code would compile and run as expected.
 //:
-//: person?.musicPreferences?[2].getFavoriteSong()?.artist?.name
+//:     person?.musicPreferences?[2].getFavoriteSong()?.artist?.name
 //:
 //: This line could be read as: optional person's second optional music preference's favorite song's
 //: optional artist's name.
+
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Clases and Structures
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: Classes and structures can both:
 //:
@@ -46,8 +50,8 @@ class VideoMode
 var someResolution = Resolution()
 var someVideoMode = VideoMode()
 
-//: ------------------------------------------------------------------------------------------------
-//: Accessing properties
+
+//: ## Accessing properties
 //:
 //: We can access members of the class or structure using the dot operator:
 someResolution.width
@@ -59,8 +63,8 @@ someVideoMode.resolution.width
 someVideoMode.resolution.width = 2880
 someVideoMode.resolution.height = 1800
 
-//: ------------------------------------------------------------------------------------------------
-//: Structures and Enumerations are Value Types
+
+//: ## Structures and Enumerations are Value Types
 //:
 //: This means that when passing an instance of a structure or enumeration to a function (or
 //: assigning an instance of a structure or enumeration to another value), the structure or
@@ -82,10 +86,10 @@ constantResolution
 //:
 //: The following will not compile:
 //:
-//: constantResolution.width = 320
+//:     constantResolution.width = 320
 
-//: ------------------------------------------------------------------------------------------------
-//: Classes are Reference Types:
+
+//: ## Classes are Reference Types:
 //:
 //: This means that when passing an instance of an object to a function (or assigning an instance
 //: of an object to another value), the new value will hold a reference to the original object.
@@ -108,10 +112,10 @@ constantVideoMode.frameRate = 24
 //:
 //: This line of code will not compile:
 //:
-//: constantVideoMode = VideoMode
+//:     constantVideoMode = VideoMode
 
-//: ------------------------------------------------------------------------------------------------
-//: Memberwise Initializers for Structure Types
+
+//: ## Memberwise Initializers for Structure Types
 //:
 //: We can set the properties without the need to create a specialiized init routine. If a struct
 //: (not a class) does not have any initializers, then Swift will provide a "Memberwise Initializer"
@@ -121,8 +125,8 @@ constantVideoMode.frameRate = 24
 //: an initializer that includes one externally named parameter for each property in the structure.
 let vga = Resolution(width: 640, height: 480)
 
-//: ------------------------------------------------------------------------------------------------
-//: Identity operators
+
+//: ## Identity operators
 //:
 //: Since classes are reference types, we can check to see if they are 'identical' with the
 //: Identity (===) operator:
@@ -134,4 +138,7 @@ constantVideoMode === variableVideoMode
 //: The following line will not compile as it uses the equality operator and VideoMode hasn't
 //: defined an equality operator:
 //:
-//: constantVideoMode == variableVideoMode
+//:     constantVideoMode == variableVideoMode
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

@@ -1,5 +1,9 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//: 
+//: # Assertions
+//: 
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Assertions only trigger in debug mode and not in published builds
 //:
@@ -15,3 +19,7 @@ assert(age >= 0, "A person's age cannot be negative")
 //: You can assert without the message
 assert(age >= 0)
 
+
+
+//: 
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)

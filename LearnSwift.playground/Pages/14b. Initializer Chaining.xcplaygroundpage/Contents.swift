@@ -1,5 +1,9 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Initializer Chaining
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Initializer Chaining refers to the way in which initialization takes place along the class
 //:   hierarchy.
@@ -47,8 +51,8 @@ class Food
 let namedMeat = Food(name: "Bacon")
 let mysteryMeat = Food()
 
-//: ------------------------------------------------------------------------------------------------
-//: Two-Phase Initialization
+
+//: ## Two-Phase Initialization
 //:
 //: Two-phase initialization is a new concept enforced by Swift. Think of it like this:
 //:
@@ -106,8 +110,8 @@ let oneMysteryItem = RecipeIngredient()
 let oneBacon = RecipeIngredient(name: "Bacon")
 let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
 
-//: ------------------------------------------------------------------------------------------------
-//: Inheriting a full set of the super's initializers
+
+//: ## Inheriting a full set of the super's initializers
 //:
 //: In the following class, we don't specify any initializer, but that's OK because we have default
 //: values for the stored property (purchased).
@@ -192,3 +196,7 @@ struct CheckerBoard
 var board = CheckerBoard()
 board.squareIsBlackAtRow(1, column: 1) // Should be false
 board.squareIsBlackAtRow(1, column: 2) // Should be true
+
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

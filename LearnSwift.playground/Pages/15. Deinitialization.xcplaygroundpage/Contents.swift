@@ -1,5 +1,9 @@
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)
+//:
+//: # Deinitialization
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Deinitializers are called automatically before a class instance is
 //:   deallocated,so you can access all properties in the deinitializer.
@@ -69,3 +73,7 @@ playerOne = nil
 //: it (with minor changes to print variables using println) then you
 //: will see that the bank does indeed have 12000 coins.
 Bank.coinsInBank
+
+
+
+//: > [Previous Page](@prev)   |   [Contents](Contents)   |   [Next Page](@next)

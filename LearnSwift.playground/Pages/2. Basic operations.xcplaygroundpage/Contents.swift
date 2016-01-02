@@ -1,16 +1,20 @@
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
+//:
+//: # Basic Operations
+//:
 //: ------------------------------------------------------------------------------------------------
-//: Things to know:
+//: __Things to know:__
 //:
 //: * Assuming knowledge of C here, so a lot will be left out that is the the same, such as
-//:   "let i = 1 + 2"
+//:   `let i = 1 + 2`
 //:
-//: * Unary operators work on a single target. Of them, you have prefix operators such as !b or
-//:   postfix operators such as i++.
+//: * Unary operators work on a single target. Of them, you have prefix operators such as `!b` or
+//:   postfix operators such as `i++`.
 //:
 //: * Binary operators work on two targets and are infix operators because they go between two
-//:   values, such as a + b
+//:   values, such as `a + b`
 //:
-//: * Ternary operators work on three targets. There is only one ternary: a ? b : c.
+//: * Ternary operators work on three targets. There is only one ternary: `a ? b : c`.
 //: ------------------------------------------------------------------------------------------------
 
 //: We have our standard assignment operator (=). Note that the assignment operator in Swift does
@@ -30,8 +34,8 @@ y
 var c = a / b // Floatng point result
 var d = a % b // Floating point remainder
 
-//: ------------------------------------------------------------------------------------------------
-//: Range operators
+
+//: ## Range operators
 //:
 //: The range operator with two dots means up to but NOT including the final value.
 //:
@@ -49,8 +53,8 @@ for i in 1...10
 	i // prints 1 through 10
 }
 
-//: ------------------------------------------------------------------------------------------------
-//: Unary, Binary and Ternary operators
+
+//: ## Unary, Binary and Ternary operators
 //:
 //: Unary prefix operators appear before their taget. Here we increment a then negate it:
 ++a
@@ -84,8 +88,8 @@ let dogCow = String(dog) + String(cow)
 //: Ternary operators work on three targets:
 truefalse ? a : b
 
-//: ------------------------------------------------------------------------------------------------
-//: Identity operators
+
+//: ## Identity operators
 //:
 //: We can test if the object reference refers to the same instance of an object (as opposed to two
 //: objects that are "equivalent" based on some compare logic.) We do this with the === operator:
@@ -99,11 +103,14 @@ c1 === c1
 "abc" == "abc"
 "abc" == "ABC"
 
-//: ------------------------------------------------------------------------------------------------
-//: Logical operators
+
+//: ## Logical operators
 //:
 //: Comparisons use the logical operators with AND, OR and NOT
 if (true && false) || !(false && true)
 {
 	"true"
 }
+
+
+//: > [Previous Page](@previous)   |   [Contents](Contents)   |  [Next Page](@next)
