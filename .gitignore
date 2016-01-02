@@ -1,0 +1,6 @@
+*.xctimeline
+ignore
+# Exclude personal Xcode user settings
+xcuserdata/ 
+*.xcworkspace
+!default.xcworkspace
