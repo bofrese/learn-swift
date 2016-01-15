@@ -91,7 +91,7 @@ for item in shoppingList
 
 //: We can also use the the enumerate() method to return a tuple containing the index and value
 //: for each element:
-for (index, value) in enumerate(shoppingList)
+for (index, value) in shoppingList.enumerate()
 {
 	index
 	value
@@ -124,15 +124,12 @@ let immutableArray = ["a", "b"]
 //: In terms of immutability, it's important to consider that the array and its contents are treated
 //: separately. Therefore, you can change the contents of an immutable array, but you can't change
 //: the array itself.
-//:
-//: We can't change the contents of an immutable array:
-//:
-//: immutableArray[0] = "b"
-//:
-//: Nor can we change the size or add an element, you will get a compiler error:
-//:
-//: immutableArray += "c"
 
+//: We can't change the contents of an immutable array:
+//     immutableArray[0] = "b"
+
+//: Nor can we change the size or add an element, you will get a compiler error:
+//     immutableArray += "c"
 
 //: ## Arrays are Value Types
 //:

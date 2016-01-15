@@ -37,10 +37,11 @@ if emptyString.isEmpty
 
 //: Strings are VALUE TYPES, but they're referenced for performance so they are only copied on
 //: modification.
-func somefunc(a: String)
+func somefunc(a: String) -> String
 {
 	var b = a
 	b = "Changed!"
+    return b
 }
 
 var originalString = "Original"
@@ -48,7 +49,7 @@ somefunc(originalString)
 originalString // not modified
 
 //: You can iterate over a string like this:
-for character in originalString
+for character in originalString.characters
 {
 	character
 }
@@ -57,18 +58,22 @@ for character in originalString
 //: instead of a String:
 var notAString: Character = "t"
 
-//: There is no length or count member of string, you have to use the global function,
-//: countElements()
-//:
-//: This is much like calling strlen in which it iterates over the Unicode string and counts
-//: characters. Note that Unicode chars are different lenghts, so this is a non-trivial process.
-//:
-//: “Note also that the character count returned by countElements is not always the same as the
-//: length property of an NSString that contains the same characters. The length of an NSString is
-//: based on the number of 16-bit code units within the string’s UTF-16 representation and not the
-//: number of Unicode characters within the string. To reflect this fact, the length property from
-//: NSString is called utf16count when it is accessed on a Swift String value.”
-countElements(originalString)
+//: To get the length of a String, count the printable characters
+originalString.characters.count
+
+//: __Don't confuse this with endIndex__. It may look like it returns the same value, but this is only true in trivial cases
+originalString.endIndex // May not be what you want!
+
+//: Swift has advanced support for unicode. The Characters are extended grapheme clusters which can be 
+//: composed of one or more Unicode scalars. See "The Swift Programming Language" to learn more.
+//: Or check [Apples Online Documentation](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html)
+var word = "cafe"
+word.characters.count  // 4
+word.endIndex          // also 4
+
+word += "\u{301}"      // COMBINING ACUTE ACCENT, word == café
+word.characters.count  // 4
+word.endIndex          // 5 !
 
 //: Strings can be concatenated with strings and characters
 var helloworld = "hello, " + "world"

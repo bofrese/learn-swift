@@ -25,9 +25,17 @@ for index in 1...5
 }
 
 //: The constant 'index' from the previous loop is scoped only to the loop. As a result, you cannot
-//: access it beyond the loop. The following line will not compile:
-//:
-//: index = 0
+//: access it beyond the loop. 
+//: The loop constant overrides any local variable/constant and maintains
+//: its scope to the loop and does not alter the locally defined value:
+var indx = 3999
+for indx in 1...5
+{
+    indx // This ranges from 1 to 5, inclusive
+}
+indx  // After the loop, we find that 'indx' still contains the original value of 3999
+
+
 
 //: We can loop through ranges using the half-closed range operator ("..<")
 //:
@@ -37,32 +45,11 @@ for index in 1 ..< 5
 	"This will print 4 times"
 }
 
-//: Apple's "Swift Programming Language" book states the following, which I find in practice to be
-//: incorrect:
-//:
-//: “The index constant exists only within the scope of the loop. If you want to check the value of
-//: index after the loop completes, or if you want to work with its value as a variable rather than
-//: a constant, you must declare it yourself before its use in the loop.”
-//:
-//: In practice, I find that the loop constant overrides any local variable/constant and maintains
-//: its scope to the loop and does not alter the locally defined value:
-var indx = 3999
-for indx in 1...5
-{
-	indx // This ranges from 1 to 5, inclusive
-
-	// 'indx' is still acting like a constant, so this line won't compile:
-	//
-	// indx++
-}
-
-//: After the loop, we find that 'indx' still contains the original value of 3999
-indx
 
 //: We can use an underscore if you don't need access to the loop constant:
 for _ in 1...10
 {
-	println("do something")
+	print("do something")
 }
 
 //: We can iterate over arrays
@@ -81,7 +68,7 @@ for (animalName, legs) in numberOfLegs
 }
 
 //: We can iterate over characters in a String
-for character in "Hello"
+for character in "Hello".characters
 {
 	character
 }
@@ -119,10 +106,10 @@ while index > 0
 	--index
 }
 
-//: Do-While loops also resemble their C-like language counterparts. They perform the condition
+//: Repeat-While loops also resemble their C-like language counterparts. They perform the condition
 //: after each iteration through the loop. As a result, they always execute the code inside the
 //: loop at least once:
-do
+repeat
 {
 	++index
 } while (index < 3)
@@ -297,7 +284,7 @@ switch yetAnotherPoint
 //: Since swift doesn't require a break statement to avoid falling through to the next case, we can
 //: still use them to early-out of the current case without continuing work. The first statement
 //: after the 'break' will be the next statement following the entire switch construct.
-let someValue = 9000
+let someValue = 10
 switch someValue
 {
 	case let x where (x & 1) == 1:
@@ -357,10 +344,11 @@ switch integerToDescribe
 //: To enable this, labels are used, similar to labels used by C's goto statement.
 //:
 //: The following will print each name until it reaches the letter 'a' then skip to the next name
+names
 var result = ""
 nameLoop: for name in names
 {
-	characterLoop: for character in name
+	characterLoop: for character in name.characters
 	{
 		theSwitch: switch character
 		{
@@ -379,7 +367,7 @@ result
 result = ""
 nameLoop: for name in names
 {
-	characterLoop: for character in name
+	characterLoop: for character in name.characters
 	{
 		theSwitch: switch character
 		{
@@ -399,7 +387,7 @@ result
 result = ""
 nameLoop: for name in names
 {
-	characterLoop: for character in name
+	characterLoop: for character in name.characters
 	{
 		theSwitch: switch character
 		{

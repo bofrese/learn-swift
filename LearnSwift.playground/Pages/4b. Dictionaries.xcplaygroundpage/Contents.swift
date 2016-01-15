@@ -79,7 +79,7 @@ for airportCode in airports.keys
 	airportCode
 }
 
-//: We can iterate over jsut the values
+//: We can iterate over just the values
 for airportName in airports.values
 {
 	airportName
@@ -109,8 +109,8 @@ let immutableDict = ["a": "one", "b": "two"]
 //: Similar to arrays, we cannot modify the contents of an immutable dictionary. The following lines
 //: will not compile:
 //:
-//: immutableDict["a"] = "b" // You cannot modify an element
-//: immutableDict["c"] = "three" // You cannot add a new entry or change the size
+//:     immutableDict["a"] = "b"     // You cannot modify an element
+//:     immutableDict["c"] = "three" // You cannot add a new entry or change the size
 
 //: Dictionaries are value types, which means they are copied on assignment.
 //:
